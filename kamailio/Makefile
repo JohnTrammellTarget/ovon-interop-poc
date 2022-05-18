@@ -1,6 +1,6 @@
 
 
-.PHONY: install
+.PHONY: install restart log logs dump
 
 
 install: kamailio.cfg
@@ -8,4 +8,10 @@ install: kamailio.cfg
 
 restart:
 	sudo systemctl restart kamailio
+
+log logs:
+	sudo journalctl -u kamailio -b
+
+dump:
+	sudo /usr/sbin/kamcmd ul.dump
 
