@@ -3,8 +3,8 @@
 .PHONY: install restart log logs dump
 
 
-install: kamailio.cfg
-	sudo install kamailio.cfg /etc/kamailio
+install: kamailio.cfg kemi.py
+	sudo install kamailio.cfg kemi.py /etc/kamailio
 
 restart:
 	sudo systemctl restart kamailio
