@@ -2,6 +2,8 @@
 
 .PHONY: install restart log logs dump
 
+do:
+	make install restart
 
 install: kamailio.cfg kemi.py
 	sudo install kamailio.cfg kemi.py /etc/kamailio
