@@ -13,12 +13,11 @@ class kamailio:
         KSR.info(">>>>> in kamailio.__init__")
 
     def child_init(self, rank):
-        KSR.info(f">>>>> in kamailio.child_init({rank})")
+        KSR.info(">>>>> in kamailio.child_init(%s)" % rank)
         return 0
 
     def ksr_request_route(self, msg):
         """This is the equivalent of request_route{} in kamailio.cfg"""
-        KSR.info(f">>>>> in kamailio.ksr_request_route({msg})")
+        KSR.info(">>>>> in kamailio.ksr_request_route(%s)" % msg)
         KSR.info(">>>>> method='%s' r-uri='%s'" % (KSR.pv.get("$rm"), KSR.pv.get("$ru")))
-
 
